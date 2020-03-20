@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+
+  "name": "Wiki Search",
+  "description": "This extension gives you a summary from WikiPedia.",
+  "version": "1.0",
+  "icons": {
+    "128": "icon128.png",
+    "48": "icon48.png",
+    "16": "icon16.png"
+  },
+
+  "browser_action": {
+    "default_icon": "icon16.png",
+    "default_popup": "popup.html"
+  },
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+
+  "content_security_policy": "script-src 'self' https://*.google.com 'unsafe-eval'; object-src 'self'",
+  "permissions": [
+		"tabs",
+		"http://127.0.0.1:8000/",
+		"background",
+        "identity",
+        "notifications"
+	]
+}
